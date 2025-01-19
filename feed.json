@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "ph-pages",
+    "description": "",
+    "home_page_url": "https://phamhp.github.io/ph-pages",
+    "feed_url": "https://phamhp.github.io/ph-pages/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Phuc Pham"
+    },
+    "items": [
+    ]
+}

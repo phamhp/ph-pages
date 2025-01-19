@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>ph-pages</title>
+    <link href="https://phamhp.github.io/ph-pages/feed.xml" rel="self" />
+    <link href="https://phamhp.github.io/ph-pages" />
+    <updated>1969-12-31T16:00:00-08:00</updated>
+    <author>
+        <name>Phuc Pham</name>
+    </author>
+    <id>https://phamhp.github.io/ph-pages</id>
+
+</feed>

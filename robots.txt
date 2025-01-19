@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://phamhp.github.io/ph-pages/sitemap.xml
