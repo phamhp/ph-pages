@@ -3,7 +3,7 @@
     <title>ph-pages</title>
     <link href="https://phamhp.github.io/ph-pages/feed.xml" rel="self" />
     <link href="https://phamhp.github.io/ph-pages" />
-    <updated>2025-01-19T16:51:42-08:00</updated>
+    <updated>2025-01-19T17:03:51-08:00</updated>
     <author>
         <name>Phuc Pham</name>
     </author>
@@ -20,12 +20,12 @@
         <updated>2025-01-19T16:08:58-08:00</updated>
             <summary>
                 <![CDATA[
-                    One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as file,&hellip;
+                    One of the challenges when working with Ansible is manipulating strings effectively. While Ansible provides various modules, such as file and lineinfile, to process the&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as <code>file</code>, <code>lineinfile</code>, and others. Recently, I had a task where I needed to capture the hostname and replace it in a YAML file. To preserve the spacing structure of the YAML file, I had to use regex and capture it in a group.</p>
+                <p>One of the challenges when working with Ansible is manipulating strings effectively. While Ansible provides various modules, such as <code>file</code> and <code>lineinfile</code>, to process the content of files, certain tasks can still be tricky. Recently, I encountered a task where I needed to capture the hostname and replace it in a YAML file. To maintain the spacing structure inherent to YAML, I had to rely on regex and capture the required information using a group.</p>
 <p>Example:</p>
 <pre id="codecell0"><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example</span>
   <span class="nt">ansible.builtin.lineinfile</span><span class="p">:</span>

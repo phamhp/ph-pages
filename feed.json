@@ -13,15 +13,15 @@
             "id": "https://phamhp.github.io/ph-pages/regex-and-grouping-in-ansible.html",
             "url": "https://phamhp.github.io/ph-pages/regex-and-grouping-in-ansible.html",
             "title": "Regex and Grouping in Ansible",
-            "summary": "One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as file,&hellip;",
-            "content_html": "<p>One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as <code>file</code>, <code>lineinfile</code>, and others. Recently, I had a task where I needed to capture the hostname and replace it in a YAML file. To preserve the spacing structure of the YAML file, I had to use regex and capture it in a group.</p>\n<p>Example:</p>\n<pre id=\"codecell0\"><span class=\"p p-Indicator\">-</span> <span class=\"nt\">name</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">Example</span>\n  <span class=\"nt\">ansible.builtin.lineinfile</span><span class=\"p\">:</span>\n    <span class=\"nt\">path</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">/tmp/config</span>\n    <span class=\"nt\">regexp</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">(\\s+)hostname:\\s</span>\n    <span class=\"nt\">line</span><span class=\"p\">:</span> \\1hostname{{\":\"}} {{ ansible_hostname }}\n    <span class=\"nt\">backrefs</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">yes<br></span></pre>",
+            "summary": "One of the challenges when working with Ansible is manipulating strings effectively. While Ansible provides various modules, such as file and lineinfile, to process the&hellip;",
+            "content_html": "<p>One of the challenges when working with Ansible is manipulating strings effectively. While Ansible provides various modules, such as <code>file</code> and <code>lineinfile</code>, to process the content of files, certain tasks can still be tricky. Recently, I encountered a task where I needed to capture the hostname and replace it in a YAML file. To maintain the spacing structure inherent to YAML, I had to rely on regex and capture the required information using a group.</p>\n<p>Example:</p>\n<pre id=\"codecell0\"><span class=\"p p-Indicator\">-</span> <span class=\"nt\">name</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">Example</span>\n  <span class=\"nt\">ansible.builtin.lineinfile</span><span class=\"p\">:</span>\n    <span class=\"nt\">path</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">/tmp/config</span>\n    <span class=\"nt\">regexp</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">(\\s+)hostname:\\s</span>\n    <span class=\"nt\">line</span><span class=\"p\">:</span> \\1hostname{{\":\"}} {{ ansible_hostname }}\n    <span class=\"nt\">backrefs</span><span class=\"p\">:</span> <span class=\"l l-Scalar l-Scalar-Plain\">yes<br></span></pre>",
             "author": {
                 "name": "Phuc Pham"
             },
             "tags": [
             ],
             "date_published": "2025-01-19T16:08:58-08:00",
-            "date_modified": "2025-01-19T16:51:42-08:00"
+            "date_modified": "2025-01-19T17:03:51-08:00"
         }
     ]
 }
