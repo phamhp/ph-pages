@@ -3,10 +3,37 @@
     <title>ph-pages</title>
     <link href="https://phamhp.github.io/ph-pages/feed.xml" rel="self" />
     <link href="https://phamhp.github.io/ph-pages" />
-    <updated>1969-12-31T16:00:00-08:00</updated>
+    <updated>2025-01-19T16:50:35-08:00</updated>
     <author>
         <name>Phuc Pham</name>
     </author>
     <id>https://phamhp.github.io/ph-pages</id>
 
+    <entry>
+        <title>Regex and Grouping in Ansible</title>
+        <author>
+            <name>Phuc Pham</name>
+        </author>
+        <link href="https://phamhp.github.io/ph-pages/regex-and-grouping-in-ansible.html"/>
+        <id>https://phamhp.github.io/ph-pages/regex-and-grouping-in-ansible.html</id>
+
+        <updated>2025-01-19T16:08:58-08:00</updated>
+            <summary>
+                <![CDATA[
+                    One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as file,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>One of the difficulties in dealing with Ansible is manipulating strings. Ansible provides various modules to process the content of a file, such as <code>file</code>, <code>lineinfile</code>, and others. Recently, I had a task where I needed to capture the hostname and replace it in a YAML file. To preserve the spacing structure of the YAML file, I had to use regex and capture it in a group.</p>
+<p>Example:</p>
+<pre id="codecell0"><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example</span>
+  <span class="nt">ansible.builtin.lineinfile</span><span class="p">:</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/config</span>
+    <span class="nt">regexp</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">(\s+)hostname:\s</span>
+    <span class="nt">line</span><span class="p">:</span> \1hostname{{":"}} {{ ansible_hostname }}
+    <span class="nt">backrefs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yes<br></span></pre>
+            ]]>
+        </content>
+    </entry>
 </feed>
